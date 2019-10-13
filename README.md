@@ -6,7 +6,7 @@ password: admin
 
 Admin login shows list of all users, and can add, edit, and delete users
 
-To run the app, cd into user_regsitrationfolder and run:
+To run the app, cd into user_registrationfolder and run:
 pipenv shell
 python manage.py runserver
 
