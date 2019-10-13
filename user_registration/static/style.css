@@ -1,0 +1,33 @@
+.login-form{
+    width: 50%;
+}
+table{
+    table-layout: fixed;
+}
+td.userWebsite{
+    word-wrap:break-word
+}
+tr{
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+#username{
+    width: 125px;
+}
+#firstname{
+    width: 125px;
+}
+#lastname{
+    width: 125px;
+}
+#email{
+    width: 300px;
+}
+#website{
+    width: 325px;
+}
+
+#createUserButton{
+    margin-top: 25px;
+}

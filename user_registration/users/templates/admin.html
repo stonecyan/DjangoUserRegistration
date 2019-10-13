@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="content-section">
+        <div id="userTable">
+            <table style="width:100%">
+                <tr>
+                    <th id="username">Username</th>
+                    <th id="firstname">First Name</th>
+                    <th id="lastname">Last Name</th>
+                    <th id="email">Email</th>
+                    <th id="website">Website</th>
+                    <th></th>
+                </tr>
+                {% for user in users %}
+                <tr>
+                    <td>{{user.username}}</td>
+                    <td>{{user.first_name}}</td>
+                    <td>{{user.last_name}}</td>
+                    <td>{{user.email}}</td>
+                    <td class="userWebsite">{{user.website}}</td>
+                    <th>
+                        <a href="{% url 'user-update' user.id %}">Edit</a>
+                        {% if user.username != "admin" %}
+                            <a href="{% url 'user-delete' user.id %}">Delete</a>
+                        {% endif %}
+                    </th>
+                </tr>
+                {% endfor %}
+
+            </table>
+        </div>
+
+        <a id="createUserButton" class="btn btn-primary" href="{% url 'user-create' %}">Create User</a>
+    </div>
+{% endblock content %}
